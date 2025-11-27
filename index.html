@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Citações do Dia</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <header class="page-header">
+        <h1>Citações Inspiradoras ✨</h1>
+        <input type="checkbox" id="theme-switch" aria-label="Alternar tema claro e escuro">
+        <label for="theme-switch" class="theme-label" title="Alternar modo escuro"></label>
+    </header>
+
+    <main>
+        <article class="quote-card">
+            <section class="quote-content">
+                <blockquote id="quote-text" cite="Autor da citação">
+                    " A vida é o que acontece enquanto você está ocupado fazendo outros planos. "
+                </blockquote>
+
+                <footer>
+                    <cite id="quote-author">_John Lennon</cite>
+                </footer>
+            </section>
+
+            <section class="quote-actions">
+                <button id="generate-btn" type="button" aria-label="Gerar nova citação">
+                    Nova Citação
+                </button>
+
+                <a id="twitter-share-btn" href="#" target="_blank" title="Compartilhar no X" data-action="share">
+                    Compartilhar no X
+                </a>
+            </section>
+        </article>
+    </main>
+    <script src="/scripts/main.js"></script>
+</body>
+
+</html>

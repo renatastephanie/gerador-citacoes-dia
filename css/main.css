@@ -1,0 +1,114 @@
+/* Importação da Fonte Raleway do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* 1. RESET CSS */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* 2VARIÁVEIS DE TEMA (CLARO E ESCURO) */
+:root {
+    /* cores do tema claro */
+    --clr-background: #F7F7F5;
+    --clr-card: #FFFFFF;
+    --clr-text-primary: #2C2C2C;
+    --clr-text-secundary: #6E6E6E;
+    --clr-accent: #4A82F0;
+    --clr-accent-hover: #3a6ccd;
+    /* um pouco mais escuro para o hover */
+}
+
+/* Variáveis para o Tema Escuro, aplicadas à body.dark-mode */
+body.dark-mode {
+    /* cores do tema escuro */
+    --clr-background: #121212;
+    --clr-card: #1E1E1E;
+    --clr-text-primary: #EDEDED;
+    --clr-text-secundary: #A8A8A8;
+    --clr-accent: #5C8DFF;
+    --clr-accent-hover: #4872c9;
+}
+
+/* Aplicação das variáveis no body */
+body {
+    background-color: var(--clr-background);
+    color: var(--clr-text-primary);
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* 3. CABEÇALHO E TITULO */
+.page-header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+}
+
+/* 4. ESTILIZAÇÃO DO TEMA SWITCH (INTERRUPTOR DE TEMA) */
+
+/* esconde o input checkbox real */
+#theme-switch[type="checkbox"] {
+    display: none;
+}
+
+/* Estilização da label (o interruptor visual) */
+.theme-label {
+    display: block;
+    width: 45px;
+    height: 25px;
+    background: var(--clr-text-secundary); /* cor do fundo da trilha */
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* O "círculo"(pseudo-elemento ::after) */
+.theme-label::after {
+    content: '☀️'; /* ícone de sol para o modo claro */
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 21px;
+    height: 21px;
+    background-color: var(--clr-card);
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* Usando a pseudo-classe :checked para mover e trocar o ícone */
+#theme-switch[type="checkbox"]:checked + .theme-label::after {
+    transform: translateX(20px);
+    content: '🌙'; /* Ícone de Lua - Modo Escuro */
+}
+
+/* Usando o combinador adjacente (+) para mudar a cor da trilha no modo escuro */
+#theme-switch[type="checkbox"]:checked + .theme-label {
+    background: var(--clr-accent);
+}
+
+/* 5. CARTÃO DA CITAÇÃO (MAIN E ARTICLE) */

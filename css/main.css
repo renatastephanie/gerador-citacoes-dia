@@ -24,8 +24,7 @@ body {
     --clr-text-primary: #2C2C2C;
     --clr-text-secundary: #6E6E6E;
     --clr-accent: #4A82F0;
-    --clr-accent-hover: #3a6ccd;
-    /* um pouco mais escuro para o hover */
+    --clr-accent-hover: #3a6ccd; /* um pouco mais escuro para o hover */
 }
 
 /* Variáveis para o Tema Escuro, aplicadas à body.dark-mode */

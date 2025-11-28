@@ -16,7 +16,7 @@ body {
     min-height: 100vh;
 }
 
-/* 2VARIÁVEIS DE TEMA (CLARO E ESCURO) */
+/* 2. VARIÁVEIS DE TEMA (CLARO E ESCURO) */
 :root {
     /* cores do tema claro */
     --clr-background: #F7F7F5;

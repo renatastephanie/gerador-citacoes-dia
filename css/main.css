@@ -112,3 +112,136 @@ body {
 }
 
 /* 5. CARTÃO DA CITAÇÃO (MAIN E ARTICLE) */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.quote-card {
+    background-color: var(--clr-card);
+    max-width: 600px;
+    width: 90%;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilizando o cartão no modo escuro para um box-shadow mais sutil */
+body.dark-mode .quote-card {
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
+}
+
+/* Estilização da Citação (Blockquote e Cite) */
+.quote-content {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#quote-text {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin: 0 0 15px 0;
+    position: relative;
+    padding: 0 20px; /* Espaço para as aspas decorativas */
+    color: var(--clr-text-primary);
+}
+
+/* Pseudo-elementos para aspas decorativas (início e fim) */
+#quote-text::before {
+    content: '“';
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: 3rem;
+    color: var(--clr-accent);
+}
+
+#quote-text::after {
+    content: '”';
+    position: absolute;
+    right: 0;
+    bottom: -10px;
+    font-size: 3rem;
+    color: var(--clr-accent);
+}
+
+/* estilização do autor */
+footer cite {
+    display: block;
+    font-size: 1.1rem;
+    font-style: normal;
+    color: var(--clr-text-secundary);
+}
+
+/* 6. BOTÕES DE AÇÃO */
+.quote-actions {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap; /* Para responsividade em telas muito pequenas */
+}
+
+/* Estilização básica para ambos (Button e Anchor) */
+.quote-actions button,
+.quote-actions a {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: backgorund-color 0.2s, opacity 0.2s;
+}
+
+/* Estilo do Botão Principal (Nova Citação) */
+#generate-btn {
+    background-color: var(--clr-accent);
+    color: var(--clr-card); /* Cor do texto deve ser a do cartão para alto contraste */
+    border: none;
+}
+
+#generate-btn:hover {
+    background-color: var(--clr-accent-hover);
+}
+
+/* Estilo do Link de Compartilhamento (Usando seletor de atributo data-action) */
+a[data-actions="share"] {
+    background-color: transparent;
+    border: 2px solid var(--clr-accent);
+    color: var(--clr-accent);
+}
+
+a[data-action="share"]:hover {
+    background-color: var(--clr-accent);
+    color: var(--clr-card);
+}
+
+/* 7. RESPONSIVIDADE */
+@media (max-width: 480px){
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    #quote-text {
+        font-size: 1.2rem;
+    }
+
+    .quote-card {
+        padding: 20px;
+    }
+
+    .quote-actions {
+        flex-direction: column; /* empilha os botões em telas pequenas */
+        align-items: stretch;
+    }
+
+    .quote-actions button,
+    .quote-actions a {
+        width: 100%;
+        text-align: center;
+    }
+}

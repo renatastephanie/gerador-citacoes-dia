@@ -202,6 +202,7 @@ footer cite {
     background-color: var(--clr-accent);
     color: var(--clr-card); /* Cor do texto deve ser a do cartão para alto contraste */
     border: none;
+    margin-bottom: 12px;
 }
 
 #generate-btn:hover {
@@ -213,11 +214,13 @@ a[data-actions="share"] {
     background-color: transparent;
     border: 2px solid var(--clr-accent);
     color: var(--clr-accent);
+    margin-bottom: 12px;
 }
 
 a[data-action="share"]:hover {
     background-color: var(--clr-accent);
     color: var(--clr-card);
+    margin-bottom: 12px;
 }
 
 /* 7. RESPONSIVIDADE */

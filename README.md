@@ -35,6 +35,6 @@ Este projeto é um gerador de citações diárias simples, criado para fornecer 
 
 ## Links
 
--   **LinkedIn:** (https://www.linkedin.com/in/renata-stephanie/)
--   **GitHub:** (https://github.com/renatastephanie)
--   **Para visualizar o projeto:** [clique aqui](https://gerador-citacoes-dia.vercel.app/)
+* **LinkedIn:** (https://www.linkedin.com/in/renata-stephanie/)
+* **GitHub:** (https://github.com/renatastephanie)
+* **Para visualizar o projeto:** [clique aqui](https://gerador-citacoes-dia.vercel.app/)
